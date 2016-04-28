@@ -1,0 +1,23 @@
+.catalog{
+  padding-top: 17px;
+}
+
+.catalog-item{
+  width: 260px;
+  background: $main-color;
+  float: left;
+  margin-right: 59px;
+  margin-bottom: 30px;
+
+  &__image > img{
+    padding: 10px 10px 0 10px;
+  }
+
+  &__caption > p{
+    padding: 0px 10px 15px 10px;
+  }
+
+  &:nth-child(3n+3){
+   margin: 0;
+  }
+}

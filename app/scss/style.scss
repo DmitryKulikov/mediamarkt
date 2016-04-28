@@ -1,0 +1,18 @@
+/*libs*/
+@import "libs/_normalize";
+@import "libs/_clearfix";
+
+/*theme*/
+@import "theme/_color";
+@import "theme/_typography";
+
+/*base*/
+@import "base/_layout";
+
+/*modules*/
+@import "modules/_catalog";
+@import "modules/_menu";
+@import "modules/_form";
+@import "modules/_slider";
+
+

@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+    head
+        title= SiteName
+        meta(charset="UTF-8")
+        link(rel="stylesheet" href="css/style.css")
+        script(src="js/vendor/angular.min.js")
+        script(src="js/app.js")
+    body(ng-app="myApp" ng-controller="myAppController")
+        .inner-wrapper
+            include ./jade/catalog.jade
+            include ./jade/menu.jade
+            include ./jade/form.jade
+            include ./jade/slider.jade
+
+

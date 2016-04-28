@@ -1,0 +1,20 @@
+section.menu
+    h2.menu-title Меню
+    ul.menu-body
+        each menuKey in menu
+            if menuKey == "Каталог"
+                li(class="menu-body__item menu-body__item--active")
+                    a(href="#")=menuKey
+                .submenu-body
+                    ul.submenu-body__col
+                        each subMenuKey in submenuCol0
+                            li.submenu-body__item
+                                a(href="#")=subMenuKey
+                    ul.submenu-body__col
+                        each subMenuKey in submenuCol1
+                            li.submenu-body__item
+                                a(href="#")=subMenuKey
+                    img.submenu-body__img(src="assets/img/menu_pic.jpg" alt="")
+            else
+                li.menu-body__item
+                    a(href="#")=menuKey

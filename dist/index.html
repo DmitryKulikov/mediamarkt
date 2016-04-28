@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестовое задание MediaMarkt</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="myAppController">
+    <div class="inner-wrapper">
+      <section class="catalog">
+        <h2 class="catalog__title">Каталог</h2>
+        <div class="row">
+          <div ng-repeat="newsItem in newsItems" class="catalog-item">
+            <div class="catalog-item__image"><img ng-src="{{ newsItem.picture }}" alt=""></div>
+            <div class="catalog-item__caption">
+              <p>{{ newsItem.text }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="menu">
+        <h2 class="menu-title">Меню</h2>
+        <ul class="menu-body">
+          <li class="menu-body__item"><a href="#">Главная</a></li>
+          <li class="menu-body__item menu-body__item--active"><a href="#">Каталог</a></li>
+          <div class="submenu-body">
+            <ul class="submenu-body__col">
+              <li class="submenu-body__item"><a href="#">ТВ и Видео</a></li>
+              <li class="submenu-body__item"><a href="#">Компьютерная техника</a></li>
+              <li class="submenu-body__item"><a href="#">Фото и видео техника</a></li>
+              <li class="submenu-body__item"><a href="#">Телефоны</a></li>
+              <li class="submenu-body__item"><a href="#">Портативная техника</a></li>
+              <li class="submenu-body__item"><a href="#">Аудиотехника</a></li>
+            </ul>
+            <ul class="submenu-body__col">
+              <li class="submenu-body__item"><a href="#">Автотехника</a></li>
+              <li class="submenu-body__item"><a href="#">Техника для дома</a></li>
+              <li class="submenu-body__item"><a href="#">Техника для кухни</a></li>
+              <li class="submenu-body__item"><a href="#">Красота и Здоровье</a></li>
+              <li class="submenu-body__item"><a href="#">Игры и приставки</a></li>
+            </ul><img src="assets/img/menu_pic.jpg" alt="" class="submenu-body__img">
+          </div>
+          <li class="menu-body__item"><a href="#">О компании</a></li>
+          <li class="menu-body__item"><a href="#">Контакты</a></li>
+        </ul>
+      </section>
+      <section class="form">
+        <h2>Форма</h2>
+        <div class="form-wrapper">
+          <select class="gender-select">
+            <option class="gender-select__selected">Ваш пол</option>
+            <option class="gender-select__option">Мужской</option>
+            <option class="gender-select__option">Женский</option>
+          </select>
+          <div class="input-first-group">
+            <input type="radio" id="input-first-group-radio-0" name="first-group" class="radio-item">
+            <label for="input-first-group-radio-0"></label>
+            <input type="radio" id="input-first-group-radio-1" name="first-group" class="radio-item">
+            <label for="input-first-group-radio-1"></label>
+            <input type="radio" id="input-first-group-radio-2" name="first-group" checked="checked" class="radio-item">
+            <label for="input-first-group-radio-2"></label>
+          </div>
+          <div class="input-second-group">
+            <input type="radio" id="input-second-group-radio-0" name="radio" class="radio-item-squared">
+            <label for="input-second-group-radio-0"></label>
+            <input type="radio" id="input-second-group-radio-1" name="radio" class="radio-item-squared">
+            <label for="input-second-group-radio-1"></label>
+            <input type="radio" id="input-second-group-radio-2" name="radio" checked="checked" class="radio-item-squared">
+            <label for="input-second-group-radio-2"></label>
+          </div>
+          <div class="span from-message">Отметьте что-нибудь</div>
+          <div class="form-buttons-wrapper">
+            <button class="form-button--normal">Кнопка</button>
+            <button class="form-button--hover">Кнопка</button>
+            <button class="form-button--active">Кнопка</button>
+          </div>
+        </div>
+      </section>
+      <section class="silder">
+        <h2 class="slider-title">Слайдер</h2>
+        <div class="slider-wrapper">
+          <div class="slider-pictures">
+            <div class="slide-pictures__item"><img src="assets/img/slider_placeholder.jpg" alt=""></div>
+            <div class="slider-pagination">
+              <div class="slider-pagination__item"></div>
+              <div class="slider-pagination__item"></div>
+              <div class="slider-pagination__item"></div>
+              <div class="slider-pagination__item"></div>
+            </div>
+          </div>
+          <div class="slider-information">
+            <div class="slider-information__item">
+              <p>В Индии был замечен новый Chevrolat Trailblazer</p>
+            </div>
+            <div class="slider-information__item">
+              <p>Datsun наращивает продажи в России</p>
+            </div>
+            <div class="slider-information__item">
+              <p>Ford Kuga ожидает премиальная модификация Vignale</p>
+            </div>
+            <div class="slider-information__item">
+              <p>Объем продаж Audi по всему миру вырос на 6%</p>
+            </div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-triangle">
+              <polygon points="0,0 0,40 10,20"></polygon>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
