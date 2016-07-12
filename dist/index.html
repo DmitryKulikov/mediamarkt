@@ -12,7 +12,7 @@
       <section class="catalog">
         <h2 class="catalog__title">Каталог</h2>
         <div class="row">
-          <div ng-repeat="newsItem in newsItems" class="catalog-item">
+          <div ng-repeat="newsItem in newsItems | filter:query" class="catalog-item">
             <div class="catalog-item__image"><img ng-src="{{ newsItem.picture }}" alt=""></div>
             <div class="catalog-item__caption">
               <p>{{ newsItem.text }}</p>

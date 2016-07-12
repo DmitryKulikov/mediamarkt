@@ -1,7 +1,7 @@
 section.catalog
     h2.catalog__title Каталог
     .row
-        div(ng-repeat="newsItem in newsItems" class="catalog-item")
+        div(ng-repeat="newsItem in newsItems | filter:query" class="catalog-item")
             .catalog-item__image
                 <img ng-src="{{ newsItem.picture }}" alt="">
             .catalog-item__caption
